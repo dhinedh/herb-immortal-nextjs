@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        dm: ['DM Sans', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        dm: ['var(--font-dm-sans)', 'DM Sans', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],
+        'open-sans': ['var(--font-open-sans)', 'Open Sans', 'sans-serif'],
       },
     },
   },

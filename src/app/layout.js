@@ -1,7 +1,36 @@
+import { DM_Sans, Poppins, Montserrat, Open_Sans } from 'next/font/google'
 import './globals.css'
 
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-open-sans',
+  display: 'swap',
+})
+
 export const metadata = {
-  title: 'MyHerbalShop - Your Trusted Hub For Holistic Wellness',
+  title: 'Herb Immortal - Your Trusted Hub For Holistic Wellness',
   description: 'Access Personalized Wellness Solutions',
   icons: {
     icon: '/logo.png',
@@ -13,15 +42,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="font-dm antialiased">
+      <body className={`${dmSans.variable} ${poppins.variable} ${montserrat.variable} ${openSans.variable} font-dm antialiased`}>
         {children}
       </body>
     </html>
