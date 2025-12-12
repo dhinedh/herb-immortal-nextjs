@@ -3,19 +3,19 @@
 const FeatureCard = ({ image, title, description, imagePosition = 'center 20%' }) => {
   return (
     <div
-      className="flex flex-col items-center bg-white rounded-[40px] overflow-hidden group feature-card-hover transition-shadow duration-300"
+      className="flex flex-col items-center bg-white rounded-[38px] overflow-hidden group feature-card-hover transition-shadow duration-300"
       style={{
         border: '1px solid #265C2D',
-        width: '380px',
-        height: '680px',
+        width: '355px',
+        height: '655px',
         opacity: 1
       }}
     >
       <div
         className="relative overflow-hidden"
         style={{
-          width: '380px',
-          height: '450px',
+          width: '355px',
+          height: '415px',
           opacity: 1,
           borderTopLeftRadius: '10px',
           borderTopRightRadius: '10px'
@@ -35,9 +35,9 @@ const FeatureCard = ({ image, title, description, imagePosition = 'center 20%' }
         />
       </div>
 
-      <div className="p-5 flex flex-col">
+      <div className="p-5 pt-6 flex flex-col">
         <h3
-          className="mb-2"
+          className="mb-3"
           style={{
             color: '#265C2D',
             fontFamily: 'DM Sans, sans-serif',
@@ -93,18 +93,18 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-white">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1600px' }}>
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal mb-2 md:mb-4 heading-line-1">
+    <section className="py-11 md:py-15 lg:py-22 bg-white">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1500px' }}>
+        <div className="text-center mb-11 md:mb-15">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-normal mb-2 md:mb-3 heading-line-1">
             Wellness made <span className="text-green-600">Simple<span className="and-desktop"> and</span></span>
           </h2>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal heading-line-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-normal heading-line-2">
              <span className="text-green-600"><span className="and-mobile">And </span>Affordable</span>
           </h2>
         </div>
         
-        <div className="flex flex-col lg:flex-row justify-center items-start gap-8 md:gap-12 lg:gap-8">
+        <div className="flex flex-col lg:flex-row justify-center items-start gap-6 md:gap-10 lg:gap-7">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -119,7 +119,7 @@ const FeaturesSection = () => {
 
       <style jsx>{`
         .feature-card-hover:hover {
-          box-shadow: 0px 6px 6px 0px #265C2D80;
+          box-shadow: 0px 5.5px 5.5px 0px #265C2D80;
         }
 
         .and-mobile {
@@ -131,8 +131,8 @@ const FeaturesSection = () => {
           .heading-line-2 {
             font-family: 'DM Sans', sans-serif !important;
             font-weight: 400 !important;
-            font-size: 25px !important;
-            line-height: 35px !important;
+            font-size: 24px !important;
+            line-height: 34px !important;
             letter-spacing: 0.02em !important;
             text-transform: capitalize !important;
             margin-bottom: 0 !important;
@@ -158,16 +158,16 @@ const FeaturesSection = () => {
 
           .feature-card-hover {
             border: 0.6px solid #265C2D !important;
-            width: 274.91px !important;
-            height: 492.77px !important;
+            width: 260px !important;
+            height: 480px !important;
             flex-shrink: 0 !important;
           }
 
           .feature-card-hover > div:first-of-type {
-            width: 274.91px !important;
-            height: 327.85px !important;
-            border-top-left-radius: 40px !important;
-            border-top-right-radius: 40px !important;
+            width: 260px !important;
+            height: 310px !important;
+            border-top-left-radius: 38px !important;
+            border-top-right-radius: 38px !important;
             border-bottom-left-radius: 0 !important;
             border-bottom-right-radius: 0 !important;
             display: block !important;
@@ -194,7 +194,7 @@ const FeaturesSection = () => {
           }
 
           .feature-card-hover > div:last-of-type {
-            padding: 1.5rem 0.75rem 0.75rem 0.75rem !important;
+            padding: 1.5rem 1rem 1rem 1rem !important;
             margin-top: -3px !important;
             background-color: white !important;
             position: relative !important;
@@ -205,11 +205,11 @@ const FeaturesSection = () => {
             font-family: 'DM Sans', sans-serif !important;
             font-weight: 800 !important;
             font-size: 20px !important;
-            line-height: 1.2 !important;
+            line-height: 1.3 !important;
             letter-spacing: 0% !important;
             text-transform: capitalize !important;
             margin-bottom: 1rem !important;
-            padding: 0 1rem !important;
+            padding: 0 0.5rem !important;
             width: auto !important;
             height: auto !important;
           }
@@ -217,11 +217,11 @@ const FeaturesSection = () => {
           .feature-card-hover p {
             font-family: 'DM Sans', sans-serif !important;
             font-weight: 300 !important;
-            font-size: 10px !important;
-            line-height: 100% !important;
+            font-size: 10.5px !important;
+            line-height: 105% !important;
             letter-spacing: 0% !important;
             text-transform: capitalize !important;
-            padding: 0 1rem !important;
+            padding: 0 0.5rem !important;
           }
         }
       `}</style>

@@ -9,15 +9,15 @@ export default function HeroSection() {
       <style>{`
         @media (max-width: 639px) {
           .hero-section-container-mobile {
-            height: 550px !important;
+            height: 540px !important;
             opacity: 1 !important;
           }
         }
       `}</style>
-      <div className="hero-section-container-mobile font-dm w-full max-w-[420px] sm:max-w-[95%] lg:max-w-[1280px] mx-auto relative px-3 sm:px-5 md:px-6 lg:px-10 py-3 sm:py-4 md:py-6 sm:overflow-hidden mt-[60px] sm:mt-[75px] md:mt-[95px]">
+      <div className="hero-section-container-mobile font-dm w-full max-w-[400px] sm:max-w-[92%] lg:max-w-[1150px] mx-auto relative px-3 sm:px-4 md:px-5 lg:px-9 py-2.5 sm:py-3.5 md:py-5 sm:overflow-hidden mt-[70px] sm:mt-[85px] md:mt-[105px]">
       {/* Mobile Gradient Container */}
       <div
-        className="absolute bottom-0 left-0 w-full h-[350px] sm:hidden rounded-b-[80px] z-0"
+        className="absolute bottom-0 left-0 w-full h-[320px] sm:hidden rounded-b-[75px] z-0"
         style={{
           background:
             "linear-gradient(180deg, rgba(203, 246, 150, 0) 0%, rgba(118, 222, 127, 0.2) 35.1%, #BDEDC2 100%)",
@@ -26,7 +26,7 @@ export default function HeroSection() {
 
       {/* Desktop Gradient Background */}
       <div
-        className="hidden sm:block absolute inset-0 rounded-b-[80px] lg:rounded-[40px] z-0"
+        className="hidden sm:block absolute inset-0 rounded-b-[75px] lg:rounded-[38px] z-0"
         style={{
           background:
             "linear-gradient(180deg, rgba(203, 246, 150, 0) 0%, rgba(118, 222, 127, 0.2) 35.1%, #BDEDC2 100%)",
@@ -34,13 +34,13 @@ export default function HeroSection() {
       ></div>
 
       {/* SM/MD - Just Logo */}
-      <div className="lg:hidden relative z-20 flex justify-center items-center" style={{ marginTop: '25px', transform: 'translateY(-8px)' }}>
+      <div className="lg:hidden relative z-20 flex justify-center items-center" style={{ marginTop: '22px', transform: 'translateY(-7px)' }}>
         <img
           src="/images/logo.png"
           alt="Logo"
           style={{
-            width: '40px',
-            height: '37px',
+            width: '38px',
+            height: '35px',
           }}
         />
       </div>
@@ -51,47 +51,47 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5 lg:gap-5.5 items-center max-w-5xl mx-auto">
           {/* LEFT CONTENT */}
-          <div className="flex flex-col gap-3.5 sm:gap-5 lg:gap-6 text-center lg:text-left px-2 lg:pr-8 relative z-30">
-            <h1 className="text-[30px] sm:text-[42px] md:text-[54px] lg:text-[60px] xl:text-[64px] font-semibold leading-[1.1] sm:leading-tight text-gray-900">
+          <div className="flex flex-col gap-3.5 sm:gap-4.5 lg:gap-5.5 text-center lg:text-left px-2 lg:pr-7 relative z-30">
+            <h1 className="text-[28px] sm:text-[38px] md:text-[48px] lg:text-[52px] xl:text-[56px] font-semibold leading-[1.1] sm:leading-tight text-gray-900">
               Download The Super App Now
             </h1>
 
-            <p className="text-[16px] sm:text-[20px] md:text-[23px] lg:text-[25px] xl:text-[26px] text-gray-600 leading-relaxed">
+            <p className="text-[15px] sm:text-[19px] md:text-[21px] lg:text-[23px] xl:text-[24px] text-gray-600 leading-relaxed">
               Access Personalized Wellness Solutions
             </p>
 
-            <div className="flex flex-row justify-center lg:justify-start gap-3 sm:gap-3.5 lg:gap-4">
+            <div className="flex flex-row justify-center lg:justify-start gap-2.5 sm:gap-3 lg:gap-3.5">
               <style>{`
                 @media (max-width: 1023px) {
                   .hero-button-sm {
-                    width: 150px !important;
-                    height: 52px !important;
+                    width: 140px !important;
+                    height: 48px !important;
                     padding: 0 !important;
                   }
                 }
               `}</style>
-              <button className="hero-button-sm flex items-center justify-center gap-2 sm:gap-2.5 rounded-[15px] sm:rounded-[18px] bg-black text-white px-4 sm:px-5 py-2.5 sm:py-3 hover:bg-gray-800 transition-all shadow-lg w-full sm:w-auto lg:px-5 lg:py-3">
-                <img src="/images/Apple-logo.png" alt="App Store" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <button className="hero-button-sm flex items-center justify-center gap-1.5 sm:gap-2 rounded-[14px] sm:rounded-[17px] bg-black text-white px-3.5 sm:px-4.5 py-2 sm:py-2.5 hover:bg-gray-800 transition-all shadow-lg w-full sm:w-auto lg:px-4.5 lg:py-2.5">
+                <img src="/images/Apple-logo.png" alt="App Store" className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5" />
                 <div className="text-left">
-                  <div className="text-base sm:text-lg font-semibold">App Store</div>
+                  <div className="text-sm sm:text-base font-semibold">App Store</div>
                 </div>
               </button>
 
-              <button className="hero-button-sm flex items-center justify-center gap-2 sm:gap-2.5 bg-white text-gray-900 px-4 sm:px-5 py-2.5 sm:py-3 rounded-[15px] sm:rounded-[18px] border-2 border-black hover:border-gray-400 transition-all shadow-lg w-full sm:w-auto lg:px-5 lg:py-3">
-                <img src="/images/Playstore.png" alt="Google Play" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <button className="hero-button-sm flex items-center justify-center gap-1.5 sm:gap-2 bg-white text-gray-900 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-[14px] sm:rounded-[17px] border-2 border-black hover:border-gray-400 transition-all shadow-lg w-full sm:w-auto lg:px-4.5 lg:py-2.5">
+                <img src="/images/Playstore.png" alt="Google Play" className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5" />
                 <div className="text-left">
-                  <div className="text-base sm:text-lg font-semibold">Google Play</div>
+                  <div className="text-sm sm:text-base font-semibold">Google Play</div>
                 </div>
               </button>
             </div>
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="relative flex justify-center lg:justify-end mt-4 sm:mt-5 lg:mt-0 min-h-[480px] sm:min-h-[450px] lg:min-h-0">
-            {/* Phone Image - Moved to back with z-0 */}
-            <div className="relative w-[180px] h-[280px] sm:w-[280px] sm:h-auto md:w-[330px] lg:w-[400px] xl:w-[430px] sm:translate-y-5 lg:translate-y-6 left-[10px] sm:left-[-40px] lg:left-[-70px] z-0">
+          <div className="relative flex justify-center lg:justify-end mt-3.5 sm:mt-4.5 lg:mt-0 min-h-[460px] sm:min-h-[440px] lg:min-h-0">
+            {/* Phone Image - Made Bigger and Moved Down */}
+            <div className="relative w-[185px] h-[275px] sm:w-[275px] sm:h-auto md:w-[320px] lg:w-[380px] xl:w-[410px] sm:translate-y-8 lg:translate-y-10 left-[9px] sm:left-[-37px] lg:left-[-65px] z-0">
               <img
                 src="/images/HeroPhone.png"
                 alt="App Screenshot"
@@ -99,21 +99,21 @@ export default function HeroSection() {
               />
             </div>
 
-            {/* Floating Category Card */}
-            <div className="absolute top-[30px] left-[0px] sm:top-[8%] sm:left-[-10%] lg:top-[16%] lg:left-[-27%] z-20 lg:max-w-[360px]">
+            {/* Floating Category Card - Made Bigger and Moved Down */}
+            <div className="absolute top-[35px] left-[0px] sm:top-[10%] sm:left-[-9%] lg:top-[18%] lg:left-[-25%] z-20 lg:max-w-[350px]">
               <style>{`
                 @media (max-width: 1023px) {
                   .top-category-card-sm {
-                    width: 175px !important;
-                    height: 85px !important;
+                    width: 172px !important;
+                    height: 84px !important;
                   }
                 }
               `}</style>
               {/* Mobile/Tablet - No Magnet */}
               <div
-                className="top-category-card-sm lg:hidden bg-white rounded-[20px] sm:rounded-3xl p-2.5 sm:p-3.5 shadow-lg"
+                className="top-category-card-sm lg:hidden bg-white rounded-[20px] sm:rounded-3xl p-2.5 sm:p-3 shadow-lg"
                 style={{
-                  boxShadow: '0px 4px 12px 0px rgba(0, 0, 0, 0.15)'
+                  boxShadow: '0px 3.5px 11px 0px rgba(0, 0, 0, 0.13)'
                 }}
               >
                 <style>{`
@@ -130,7 +130,7 @@ export default function HeroSection() {
                     }
                   }
                 `}</style>
-                <h2 className="top-categories-heading-sm font-bold text-gray-900 mb-1.5 sm:mb-2.5 text-[11px] sm:text-[15px]">
+                <h2 className="top-categories-heading-sm font-bold text-gray-900 mb-1.5 sm:mb-2 text-[10.5px] sm:text-[13.5px]">
                   Top Categories
                 </h2>
                 <div className="grid grid-cols-5 gap-1 sm:gap-1.5">
@@ -143,7 +143,7 @@ export default function HeroSection() {
                   ].map((item, idx) => (
                     <div
                       key={idx}
-                      className="flex flex-col items-center gap-0.5 sm:gap-1.5"
+                      className="flex flex-col items-center gap-0.5 sm:gap-1"
                     >
                       <style>{`
                         @media (max-width: 1023px) {
@@ -177,7 +177,7 @@ export default function HeroSection() {
                           }
                         }
                       `}</style>
-                      <span className="category-label-sm text-[7px] sm:text-[9px] text-gray-900 text-center font-semibold leading-tight">
+                      <span className="category-label-sm text-[7px] sm:text-[8.5px] text-gray-900 text-center font-semibold leading-tight">
                         {item.label}
                       </span>
                     </div>
@@ -191,10 +191,10 @@ export default function HeroSection() {
                   <div
                     className="bg-white rounded-3xl p-4 shadow-xl"
                     style={{
-                      boxShadow: '0px 8px 24px 0px rgba(0, 0, 0, 0.15)'
+                      boxShadow: '0px 6.5px 21px 0px rgba(0, 0, 0, 0.13)'
                     }}
                   >
-                  <h2 className="font-bold text-gray-900 mb-2.5 text-[15px]">
+                  <h2 className="font-bold text-gray-900 mb-2.5 text-[14px]">
                     Top Categories
                   </h2>
                   <div className="grid grid-cols-5 gap-2">
@@ -209,14 +209,14 @@ export default function HeroSection() {
                         key={idx}
                         className="flex flex-col items-center gap-2"
                       >
-                        <div className={`w-[50px] h-[50px] ${idx === 0 ? 'bg-[#CBF696]' : 'bg-gray-100'} rounded-3xl flex items-center justify-center p-2`}>
+                        <div className={`w-[48px] h-[48px] ${idx === 0 ? 'bg-[#CBF696]' : 'bg-gray-100'} rounded-3xl flex items-center justify-center p-2`}>
                           <img
                             src={item.img}
                             alt={item.label}
                             className="w-full h-full object-contain"
                           />
                         </div>
-                        <span className="text-[10px] text-gray-900 text-center font-semibold leading-tight">
+                        <span className="text-[9.5px] text-gray-900 text-center font-semibold leading-tight">
                           {item.label}
                         </span>
                       </div>
@@ -227,13 +227,13 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Doctor Profile Card */}
-            <div className="absolute top-[22%] left-[170px] sm:top-[582px] sm:left-[220px] lg:top-[42%] lg:left-auto lg:right-[-5%] z-20 lg:max-w-[310px]">
+            {/* Doctor Profile Card - Made Bigger and Moved Down */}
+            <div className="absolute top-[24%] left-[160px] sm:top-[560px] sm:left-[220px] lg:top-[44%] lg:left-auto lg:right-[-4.5%] z-20 lg:max-w-[310px]">
               <style>{`
                 @media (max-width: 1023px) {
                   .doctor-card-sm {
-                    width: 180px !important;
-                    height: 100px !important;
+                    width: 178px !important;
+                    height: 98px !important;
                   }
                 }
               `}</style>
@@ -254,20 +254,20 @@ export default function HeroSection() {
                   }
                 }
               `}</style>
-              <div className="doctor-card-sm lg:hidden bg-white rounded-2xl sm:rounded-3xl p-2.5 sm:p-3.5 shadow-xl" style={{ boxShadow: '0px 4px 12px 0px rgba(0, 0, 0, 0.15)' }}>
-                <div className="doctor-profile-section-sm flex items-start gap-1.5 sm:gap-2.5 mb-1.5 sm:mb-2.5">
-                  <div className="bg-gray-200 rounded-full flex-shrink-0 w-[44px] h-[44px]"></div>
+              <div className="doctor-card-sm lg:hidden bg-white rounded-2xl sm:rounded-3xl p-2.5 sm:p-3 shadow-xl" style={{ boxShadow: '0px 3.5px 11px 0px rgba(0, 0, 0, 0.13)' }}>
+                <div className="doctor-profile-section-sm flex items-start gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
+                  <div className="bg-gray-200 rounded-full flex-shrink-0 w-[43px] h-[43px]"></div>
                   <div className="doctor-info-sm flex-1 min-w-0">
-                    <h4 className="font-bold text-gray-900 mb-0.5 sm:mb-1 leading-tight" style={{ fontSize: '9px', width: '90px', height: '13px' }}>
+                    <h4 className="font-bold text-gray-900 mb-0.5 leading-tight" style={{ fontSize: '9px', width: '88px', height: '13px' }}>
                       Dr. Charlie Dettman
                     </h4>
-                    <p className="text-gray-600 mb-0.5 sm:mb-1.5 flex items-center gap-1" style={{ fontSize: '7px' }}>
+                    <p className="text-gray-600 mb-0.5 flex items-center gap-0.5" style={{ fontSize: '7px' }}>
                       <span>👤</span>
-                      <span style={{ width: '65px', height: '15px' }}>
+                      <span style={{ width: '63px', height: '14px' }}>
                         Neurologist
                       </span>
                     </p>
-                    <span className="inline-flex items-center justify-center px-2.5 py-0.5 bg-[#265C2D] text-white font-semibold rounded-full" style={{ width: '38px', height: '14px', fontSize: '6.5px' }}>
+                    <span className="inline-flex items-center justify-center px-2 py-0.5 bg-[#265C2D] text-white font-semibold rounded-full" style={{ width: '38px', height: '13px', fontSize: '6.5px' }}>
                       Verified
                     </span>
                   </div>
@@ -282,7 +282,7 @@ export default function HeroSection() {
                       padding-bottom: 0 !important;
                       display: flex !important;
                       align-items: center !important;
-                      height: 22px !important;
+                      height: 21px !important;
                       gap: 4px !important;
                     }
                     .doctor-price-inner-sm {
@@ -299,7 +299,7 @@ export default function HeroSection() {
                     }
                   }
                 `}</style>
-                <div className="doctor-price-container-sm flex items-center justify-between border border-[#265C2D] rounded-xl px-2 sm:px-2.5 py-1 sm:py-1.5" style={{ width: '160px', height: '22px' }}>
+                <div className="doctor-price-container-sm flex items-center justify-between border border-[#265C2D] rounded-xl px-2 sm:px-2.5 py-0.5 sm:py-1" style={{ width: '156px', height: '21px' }}>
                   <div className="doctor-price-inner-sm flex flex-col justify-center">
                     <style>{`
                       @media (max-width: 1023px) {
@@ -332,7 +332,7 @@ export default function HeroSection() {
                       C$43
                     </div>
                   </div>
-                  <button className="bg-[#265C2D] text-white font-semibold whitespace-nowrap rounded-xl" style={{ width: '90px', height: '12px', fontSize: '6.5px' }}>
+                  <button className="bg-[#265C2D] text-white font-semibold whitespace-nowrap rounded-xl" style={{ width: '88px', height: '12px', fontSize: '6.5px' }}>
                     Book Online Session
                   </button>
                 </div>
@@ -341,14 +341,14 @@ export default function HeroSection() {
               {/* Desktop - With Magnet */}
               <div className="hidden lg:block">
                 <Magnet padding={100} disabled={false} magnetStrength={5}>
-                  <div className="bg-white rounded-3xl p-4 w-[340px] shadow-2xl" style={{ boxShadow: '0px 8px 24px 0px rgba(0, 0, 0, 0.15)' }}>
+                  <div className="bg-white rounded-3xl p-4 w-[330px] shadow-2xl" style={{ boxShadow: '0px 6.5px 21px 0px rgba(0, 0, 0, 0.13)' }}>
                     <div className="flex items-start gap-3 mb-3">
-                      <div className="w-[85px] h-[85px] bg-gray-200 rounded-full flex-shrink-0"></div>
+                      <div className="w-[80px] h-[80px] bg-gray-200 rounded-full flex-shrink-0"></div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-gray-900 text-[17px] mb-1 leading-tight">
+                        <h4 className="font-bold text-gray-900 text-[16px] mb-1 leading-tight">
                           Dr. Charlie Dettman
                         </h4>
-                        <p className="text-[11px] text-gray-600 mb-1.5 flex items-center gap-1">
+                        <p className="text-[10px] text-gray-600 mb-1.5 flex items-center gap-1">
                           👤 <span>Neurologist</span>
                         </p>
                         <span className="inline-block px-2.5 py-0.5 bg-green-700 text-white text-[9px] rounded-full font-semibold">
@@ -359,14 +359,14 @@ export default function HeroSection() {
 
                     <div className="flex items-center justify-between border border-[#265C2D] rounded-xl px-3 py-2">
                       <div>
-                        <div className="text-[12px] text-gray-500">
+                        <div className="text-[11px] text-gray-500">
                           Price
                         </div>
-                        <div className="text-[15px] font-extrabold text-gray-900">
+                        <div className="text-[14px] font-extrabold text-gray-900">
                           C$43
                         </div>
                       </div>
-                      <button className="bg-[#265C2D] h-[30px] px-3 text-white rounded-xl text-[9px] font-semibold whitespace-nowrap">
+                      <button className="bg-[#265C2D] h-[28px] px-3 text-white rounded-xl text-[9px] font-semibold whitespace-nowrap">
                         Book Online Session
                       </button>
                     </div>

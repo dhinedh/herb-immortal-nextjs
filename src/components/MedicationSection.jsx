@@ -17,7 +17,7 @@ const MedicationSection = () => {
   ];
 
   return (
-    <section className="medication-section-outer font-family-['DM_Sans'] py-8 md:py-16 bg-white flex justify-center">
+    <section className="medication-section-outer font-family-['DM_Sans'] py-7 md:py-14 bg-white flex justify-center">
       <style>{`
         @media (max-width: 1023px) {
           .medication-section-outer {
@@ -32,29 +32,29 @@ const MedicationSection = () => {
           }
         }
       `}</style>
-      <div className="medication-section-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
+      <div className="medication-section-container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl w-full">
 
         {/* Header */}
         <div
-          className="medication-header-wrapper text-center mb-8 md:mb-16 mx-auto"
+          className="medication-header-wrapper text-center mb-7 md:mb-14 mx-auto"
           style={{
             width: '100%',
-            maxWidth: '536px',
+            maxWidth: '480px',
             height: 'auto',
-            minHeight: '166px',
+            minHeight: '140px',
           }}
         >
           <style>{`
             @media (max-width: 1023px) {
               .medication-header-wrapper {
-                margin-bottom: 20px !important;
+                margin-bottom: 18px !important;
                 min-height: auto !important;
               }
               .medication-heading {
                 font-family: 'DM Sans', sans-serif !important;
                 font-weight: 400 !important;
                 font-style: normal !important;
-                font-size: 25px !important;
+                font-size: 22px !important;
                 line-height: 100% !important;
                 letter-spacing: 0% !important;
                 text-align: center !important;
@@ -70,8 +70,8 @@ const MedicationSection = () => {
             className="medication-heading font-medium px-4"
             style={{
               fontWeight: 500,
-              fontSize: 'clamp(2.5rem, 5vw, 70px)',
-              lineHeight: 'clamp(3rem, 6vw, 100px)',
+              fontSize: 'clamp(2.2rem, 4.5vw, 60px)',
+              lineHeight: 'clamp(2.6rem, 5.5vw, 85px)',
               letterSpacing: '0%',
               textTransform: 'capitalize',
               color: '#000000',
@@ -82,7 +82,7 @@ const MedicationSection = () => {
         </div>
 
         {/* Responsive Flex container */}
-        <div className="medication-flex-container flex flex-row md:flex-row lg:flex-row gap-3 md:gap-6 lg:gap-8 items-stretch justify-between min-h-[500px] lg:h-[767px]">
+        <div className="medication-flex-container flex flex-row md:flex-row lg:flex-row gap-3 md:gap-5 lg:gap-7 items-stretch justify-between min-h-[450px] lg:h-[670px]">
           <style>{`
             @media (max-width: 1023px) {
               .medication-flex-container {
@@ -105,26 +105,26 @@ const MedicationSection = () => {
           `}</style>
 
           {/* Feature Cards Section - Left on sm/md, Right on lg */}
-          <div className="feature-cards-wrapper w-1/2 md:w-1/2 lg:w-1/2 min-w-0 flex flex-col justify-between gap-2 md:gap-4 lg:gap-6 py-2 md:py-4 order-1 lg:order-2">
-            <div className="space-y-2 md:space-y-3 lg:space-y-4">
+          <div className="feature-cards-wrapper w-1/2 md:w-1/2 lg:w-1/2 min-w-0 flex flex-col justify-between gap-2 md:gap-3 lg:gap-5 py-2 md:py-3 order-1 lg:order-2">
+            <div className="space-y-2 md:space-y-2.5 lg:space-y-3.5">
               {features.map((feature, index) => (
                 <div
                   key={index}
                   className="feature-card-medication w-full transition-all duration-300 ease-in-out hover:border-2 hover:border-[#265C2D] cursor-pointer"
                   style={{
                     background: '#F8F8F8',
-                    height: 'clamp(180px, 25vw, 210px)',
-                    borderRadius: 'clamp(30px, 5vw, 50px)',
-                    padding: 'clamp(20px, 4vw, 35px)',
+                    height: 'clamp(160px, 23vw, 185px)',
+                    borderRadius: 'clamp(26px, 4.5vw, 44px)',
+                    padding: 'clamp(18px, 3.5vw, 30px)',
                   }}
                 >
                   <style>{`
                     @media (max-width: 1023px) {
                       .feature-card-medication {
                         width: 100% !important;
-                        height: 112px !important;
-                        border-radius: 20px !important;
-                        padding: 12px 16px !important;
+                        height: 100px !important;
+                        border-radius: 18px !important;
+                        padding: 10px 14px !important;
                         opacity: 1;
                         display: flex !important;
                         flex-direction: column !important;
@@ -134,20 +134,20 @@ const MedicationSection = () => {
                   `}</style>
                   {/* Title */}
                   <h3
-                    className="feature-title-medication font-semibold mb-3 lg:mb-5"
+                    className="feature-title-medication font-semibold mb-4 lg:mb-6"
                     style={{
                       fontWeight: 600,
-                      fontSize: 'clamp(18px, 3vw, 32px)',
-                      lineHeight: 'clamp(24px, 4vw, 28px)',
+                      fontSize: 'clamp(16px, 2.8vw, 28px)',
+                      lineHeight: 'clamp(22px, 3.5vw, 24px)',
                       color: '#000000',
                     }}
                   >
                     <style>{`
                       @media (max-width: 1023px) {
                         .feature-title-medication {
-                          font-size: 14px !important;
-                          line-height: 18px !important;
-                          margin-bottom: 8px !important;
+                          font-size: 12.5px !important;
+                          line-height: 16px !important;
+                          margin-bottom: 10px !important;
                         }
                       }
                     `}</style>
@@ -160,8 +160,8 @@ const MedicationSection = () => {
                       className="feature-description-medication"
                       style={{
                         fontWeight: 300,
-                        fontSize: 'clamp(16px, 2.5vw, 20px)',
-                        lineHeight: 'clamp(20px, 3vw, 24px)',
+                        fontSize: 'clamp(14px, 2.2vw, 18px)',
+                        lineHeight: 'clamp(18px, 2.8vw, 22px)',
                         letterSpacing: '0%',
                         textTransform: 'capitalize',
                         color: '#000000',
@@ -170,8 +170,8 @@ const MedicationSection = () => {
                       <style>{`
                         @media (max-width: 1023px) {
                           .feature-description-medication {
-                            font-size: 10px !important;
-                            line-height: 14px !important;
+                            font-size: 9px !important;
+                            line-height: 12.5px !important;
                           }
                         }
                       `}</style>
@@ -184,17 +184,17 @@ const MedicationSection = () => {
 
             {/* Button only visible on lg screens */}
             <button
-  className="hidden lg:block font-semibold hover:!bg-[#CBF696] hover:!text-black transition-all duration-300 self-center lg:self-start mt-2 w-full lg:w-auto text-center"
-  style={{
-    background: '#000000',
-    color: '#D8F7A9',
-    padding: 'clamp(12px, 2vw, 14px) clamp(24px, 3vw, 28px)',
-    borderRadius: '9999px',
-    fontSize: 'clamp(14px, 2vw, 16px)',
-  }}
->
-  DOWNLOAD NOW
-</button>
+              className="hidden lg:block font-semibold hover:!bg-[#CBF696] hover:!text-black transition-all duration-300 self-center lg:self-start mt-2 w-full lg:w-auto text-center"
+              style={{
+                background: '#000000',
+                color: '#D8F7A9',
+                padding: 'clamp(10px, 1.8vw, 12px) clamp(22px, 2.8vw, 26px)',
+                borderRadius: '9999px',
+                fontSize: 'clamp(13px, 1.8vw, 15px)',
+              }}
+            >
+              DOWNLOAD NOW
+            </button>
           </div>
 
           {/* Image Section - Right on sm/md, Left on lg */}
@@ -210,7 +210,7 @@ const MedicationSection = () => {
                   max-width: none !important;
                   margin-right: 0 !important;
                   height: auto !important;
-                  max-height: calc(112px * 3 + 8px * 2) !important;
+                  max-height: calc(100px * 3 + 8px * 2) !important;
                   width: auto !important;
                   justify-content: flex-end !important;
                 }
@@ -221,15 +221,15 @@ const MedicationSection = () => {
               @media (min-width: 1024px) {
                 .image-container-medication {
                   background: linear-gradient(135deg, #CBF696 0%, #54E163CC 100%);
-                  box-shadow: 5px 0 10px rgba(0,0,0,0.05), 0 5px 10px rgba(0,0,0,0.05), 0 -5px 10px rgba(0,0,0,0.05);
+                  box-shadow: 4px 0 9px rgba(0,0,0,0.05), 0 4px 9px rgba(0,0,0,0.05), 0 -4px 9px rgba(0,0,0,0.05);
                 }
               }
             `}</style>
             <div
-              className="image-container-medication flex items-center justify-center w-full max-w-[400px] lg:max-w-[833px] lg:items-end"
+              className="image-container-medication flex items-center justify-center w-full max-w-[360px] lg:max-w-[730px] lg:items-end"
               style={{
-                height: 'clamp(400px, 50vw, 767px)',
-                borderRadius: 'clamp(40px, 10vw, 111px)',
+                height: 'clamp(360px, 45vw, 670px)',
+                borderRadius: 'clamp(36px, 9vw, 98px)',
                 position: 'relative',
                 overflow: 'hidden',
                 marginRight: 0,
@@ -241,8 +241,8 @@ const MedicationSection = () => {
                 alt="Medication app interface"
                 className="block md:block lg:hidden object-contain object-center"
                 style={{
-                  width: '153px',
-                  height: '322px',
+                  width: '138px',
+                  height: '290px',
                 }}
               />
               <img
@@ -252,10 +252,10 @@ const MedicationSection = () => {
                 style={{
                   position: 'relative',
                   bottom: '0',
-                  maxWidth: '701px',
-                  maxHeight: '1476px',
-                  borderTopLeftRadius: 'clamp(40px, 10vw, 111px)',
-                  borderTopRightRadius: 'clamp(40px, 10vw, 111px)',
+                  maxWidth: '620px',
+                  maxHeight: '1300px',
+                  borderTopLeftRadius: 'clamp(36px, 9vw, 98px)',
+                  borderTopRightRadius: 'clamp(36px, 9vw, 98px)',
                 }}
               />
             </div>
@@ -263,15 +263,15 @@ const MedicationSection = () => {
         </div>
 
         {/* Centered Download Button for sm and md screens only */}
-        <div className="medication-button-wrapper flex justify-center mt-8 lg:hidden">
+        <div className="medication-button-wrapper flex justify-center mt-7 lg:hidden">
           <style>{`
             @media (max-width: 1023px) {
               .medication-button-wrapper {
-                margin-top: 24px !important;
+                margin-top: 20px !important;
               }
               .download-button-medication {
-                width: 114px !important;
-                height: 34px !important;
+                width: 102px !important;
+                height: 30px !important;
                 padding: 0 !important;
                 display: flex !important;
                 align-items: center !important;
@@ -279,7 +279,7 @@ const MedicationSection = () => {
                 font-family: 'DM Sans', sans-serif !important;
                 font-weight: 800 !important;
                 font-style: normal !important;
-                font-size: 11px !important;
+                font-size: 10px !important;
                 line-height: 100% !important;
                 letter-spacing: 0% !important;
                 text-align: center !important;
@@ -288,17 +288,17 @@ const MedicationSection = () => {
             }
           `}</style>
           <button
-  className="download-button-medication font-semibold hover:bg-[#CBF696] hover:text-black transition-all duration-300 text-center"
-  style={{
-    background: '#000000',
-    color: '#D8F7A9',
-    padding: 'clamp(12px, 2vw, 14px) clamp(24px, 3vw, 28px)',
-    borderRadius: '9999px',
-    fontSize: 'clamp(14px, 2vw, 16px)',
-  }}
->
-  DOWNLOAD NOW
-</button>
+            className="download-button-medication font-semibold hover:bg-[#CBF696] hover:text-black transition-all duration-300 text-center"
+            style={{
+              background: '#000000',
+              color: '#D8F7A9',
+              padding: 'clamp(10px, 1.8vw, 12px) clamp(22px, 2.8vw, 26px)',
+              borderRadius: '9999px',
+              fontSize: 'clamp(13px, 1.8vw, 15px)',
+            }}
+          >
+            DOWNLOAD NOW
+          </button>
         </div>
       </div>
     </section>
