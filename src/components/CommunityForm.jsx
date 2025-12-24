@@ -15,9 +15,6 @@ const CommunityForm = ({ isOpen, onClose }) => {
     gender: '',
     location: '',
     role: '',
-    businessStructure: '',
-    productCategories: '',
-    productTypes: ''
   });
   const [agreedToPIPEDA, setAgreedToPIPEDA] = useState(false);
 
@@ -77,9 +74,9 @@ const CommunityForm = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     console.log('Form submitted:', formData);
-    
+
     if (typeof window !== 'undefined' && window.innerWidth >= 768) {
       setStep(3);
     } else {
@@ -125,35 +122,35 @@ const CommunityForm = ({ isOpen, onClose }) => {
         }
         .form-field::placeholder {
           font-family: 'DM Sans';
-          font-weight: 500;
-          font-size: 18px;
+          font-weight: 400;
+          font-size: 16px;
           line-height: 20px;
           letter-spacing: 0%;
           color: #6F6C90;
         }
         .form-field {
           font-family: 'DM Sans';
-          font-weight: 500;
-          font-size: 18px;
+          font-weight: 400;
+          font-size: 16px;
           line-height: 20px;
           letter-spacing: 0%;
           color: #6F6C90;
         }
         .form-field option {
           font-family: 'DM Sans';
-          font-weight: 500;
-          font-size: 18px;
+          font-weight: 400;
+          font-size: 16px;
           line-height: 20px;
           letter-spacing: 0%;
           color: #6F6C90;
         }
         .form-label {
           font-family: 'DM Sans';
-          font-weight: 500;
-          font-size: 18px;
+          font-weight: 400;
+          font-size: 16px;
           line-height: 20px;
           letter-spacing: 0%;
-          color: '#170F49';
+          color: #170F49;
         }
         select.form-field {
           appearance: none !important;
@@ -179,6 +176,16 @@ const CommunityForm = ({ isOpen, onClose }) => {
         }
       `}</style>
       <div className="min-h-screen w-full relative">
+        <button
+          onClick={onClose}
+          className="absolute top-6 left-6 z-50 flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+          style={{ fontFamily: 'DM Sans', fontWeight: 500 }}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          Back
+        </button>
         {/* Mobile Version */}
         <div className="block md:hidden">
           {mobileStep === 1 && (
@@ -189,10 +196,11 @@ const CommunityForm = ({ isOpen, onClose }) => {
 
               <div className="flex-1 flex flex-col justify-evenly px-6 pb-6 text-center">
                 <h2
+                  className="font-bold"
                   style={{
                     fontFamily: 'DM Sans',
-                    fontWeight: 500,
-                    fontSize: '34px',
+                    fontWeight: 400,
+                    fontSize: '28px',
                     lineHeight: '120%',
                     letterSpacing: '0%',
                     textAlign: 'center',
@@ -203,13 +211,14 @@ const CommunityForm = ({ isOpen, onClose }) => {
                 </h2>
 
                 <div className="flex justify-center">
-                  <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '374px', height: '249px', opacity: 1 }} />
+                  <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '85%', height: 'auto', opacity: 1 }} />
                 </div>
 
                 <p
+                  className="font-bold"
                   style={{
                     fontFamily: 'Poppins',
-                    fontWeight: 500,
+                    fontWeight: 400,
                     fontSize: '14px',
                     lineHeight: '140%',
                     letterSpacing: '0%',
@@ -224,16 +233,16 @@ const CommunityForm = ({ isOpen, onClose }) => {
                 <div className="flex justify-center">
                   <button
                     onClick={handleMobileNext}
-                    className="flex items-center justify-center gap-2"
+                    className="flex items-center justify-center gap-2 font-bold"
                     style={{
                       background: '#275D2C',
                       border: '1px solid #275D2C',
-                      width: '351px',
+                      width: '100%',
+                      maxWidth: '351px',
                       height: '52px',
                       borderRadius: '40px',
                       color: 'white',
                       fontFamily: 'Poppins',
-                      fontWeight: 600,
                       fontSize: '16px'
                     }}
                   >
@@ -251,17 +260,31 @@ const CommunityForm = ({ isOpen, onClose }) => {
               </div>
 
               <div className="flex-1 flex flex-col justify-center px-6 pb-6">
-                <div className="space-y-10 mb-8">
+                <div className="space-y-6 mb-8">
                   <div>
-                    <label className="form-label block mb-2">Name <span style={{ color: '#275D2C' }}>*</span></label>
+                    <label className="form-label block mb-2">First Name <span style={{ color: '#275D2C' }}>*</span></label>
                     <input
                       type="text"
                       name="firstName"
-                      value={formData.firstName}
+                      value={formData.firstName || ''}
                       onChange={handleInputChange}
-                      placeholder="Enter your name"
+                      placeholder="Enter your first name"
                       className="form-field px-4 py-3 w-full"
-                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '56px', borderRadius: '30px', opacity: 1 }}
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="form-label block mb-2">Last Name <span style={{ color: '#275D2C' }}>*</span></label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName || ''}
+                      onChange={handleInputChange}
+                      placeholder="Enter your last name"
+                      className="form-field px-4 py-3 w-full"
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
                       required
                     />
                   </div>
@@ -273,7 +296,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       value={formData.gender || ''}
                       onChange={handleInputChange}
                       className="form-field px-4 py-3 w-full"
-                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '56px', borderRadius: '30px', opacity: 1 }}
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
                       required
                     >
                       <option value="">Select Gender</option>
@@ -288,10 +311,10 @@ const CommunityForm = ({ isOpen, onClose }) => {
                     <input
                       type="date"
                       name="birthday"
-                      value={formData.birthday}
+                      value={formData.birthday || ''}
                       onChange={handleInputChange}
                       className="form-field px-4 py-3 w-full"
-                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '56px', borderRadius: '30px', opacity: 1 }}
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
                       required
                     />
                   </div>
@@ -300,40 +323,38 @@ const CommunityForm = ({ isOpen, onClose }) => {
                 <div className="flex justify-between items-center">
                   <button
                     onClick={handleMobileBack}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 font-bold"
                     style={{
                       background: 'transparent',
                       color: '#3A5B22',
                       padding: '12px 24px',
                       borderRadius: '10px',
                       fontFamily: 'Poppins',
-                      fontWeight: 600,
                       fontSize: '16px',
                       border: '1px solid #3A5B22'
                     }}
                   >
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13 16L7 10L13 4" stroke="#3A5B22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M13 16L7 10L13 4" stroke="#3A5B22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     Back
                   </button>
 
                   <button
                     onClick={handleMobileNext}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 font-bold"
                     style={{
                       background: '#3A5B22',
                       color: 'white',
                       padding: '12px 32px',
                       borderRadius: '10px',
                       fontFamily: 'Poppins',
-                      fontWeight: 600,
                       fontSize: '16px'
                     }}
                   >
                     Next
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 4L13 10L7 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M7 4L13 10L7 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
                 </div>
@@ -348,17 +369,17 @@ const CommunityForm = ({ isOpen, onClose }) => {
               </div>
 
               <div className="flex-1 flex flex-col justify-center px-6 pb-6">
-                <div className="space-y-10 mb-8">
+                <div className="space-y-6 mb-8">
                   <div>
                     <label className="form-label block mb-2">Contact Email <span style={{ color: '#275D2C' }}>*</span></label>
                     <input
                       type="email"
                       name="contactEmail"
-                      value={formData.contactEmail}
+                      value={formData.contactEmail || ''}
                       onChange={handleInputChange}
                       placeholder="Enter your email"
                       className="form-field px-4 py-3 w-full"
-                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '56px', borderRadius: '30px', opacity: 1 }}
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
                       required
                     />
                   </div>
@@ -368,11 +389,11 @@ const CommunityForm = ({ isOpen, onClose }) => {
                     <input
                       type="tel"
                       name="phoneNumber"
-                      value={formData.phoneNumber}
+                      value={formData.phoneNumber || ''}
                       onChange={handleInputChange}
                       placeholder="Enter your phone number"
                       className="form-field px-4 py-3 w-full"
-                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '56px', borderRadius: '30px', opacity: 1 }}
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
                       required
                     />
                   </div>
@@ -382,11 +403,11 @@ const CommunityForm = ({ isOpen, onClose }) => {
                     <input
                       type="text"
                       name="location"
-                      value={formData.location}
+                      value={formData.location || ''}
                       onChange={handleInputChange}
                       placeholder="Enter your location"
                       className="form-field px-4 py-3 w-full"
-                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '56px', borderRadius: '30px', opacity: 1 }}
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
                       required
                     />
                   </div>
@@ -396,47 +417,61 @@ const CommunityForm = ({ isOpen, onClose }) => {
                     <input
                       type="text"
                       name="role"
-                      value={formData.role}
+                      value={formData.role || ''}
                       onChange={handleInputChange}
                       placeholder="Enter your role"
                       className="form-field px-4 py-3 w-full"
-                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '56px', borderRadius: '30px', opacity: 1 }}
+                      style={{ background: '#FFFFFF', border: '1px solid #275D2C', height: '48px', borderRadius: '24px', opacity: 1 }}
                       required
                     />
                   </div>
                 </div>
 
+                <div className="mb-4">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={agreedToPIPEDA}
+                      onChange={(e) => setAgreedToPIPEDA(e.target.checked)}
+                      className="w-5 h-5 mt-1 rounded border-2 border-green-700 cursor-pointer accent-green-700"
+                      required
+                    />
+                    <span className="text-sm" style={{ fontFamily: 'DM Sans', color: '#170F49' }}>
+                      I agree to data processing under PIPEDA for verification.
+                    </span>
+                  </label>
+                </div>
+
                 <div className="flex justify-between items-center">
                   <button
                     onClick={handleMobileBack}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 font-bold"
                     style={{
                       background: 'transparent',
                       color: '#3A5B22',
                       padding: '12px 24px',
                       borderRadius: '10px',
                       fontFamily: 'Poppins',
-                      fontWeight: 600,
                       fontSize: '16px',
                       border: '1px solid #3A5B22'
                     }}
                   >
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13 16L7 10L13 4" stroke="#3A5B22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M13 16L7 10L13 4" stroke="#3A5B22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     Back
                   </button>
 
                   <button
                     onClick={handleSubmit}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 font-bold"
                     style={{
                       background: '#3A5B22',
                       color: 'white',
                       padding: '12px 32px',
                       borderRadius: '10px',
                       fontFamily: 'Poppins',
-                      fontWeight: 700,
+                      fontWeight: 400,
                       fontSize: '16px'
                     }}
                   >
@@ -450,14 +485,14 @@ const CommunityForm = ({ isOpen, onClose }) => {
           {mobileStep === 4 && (
             <div className="min-h-screen flex flex-col justify-evenly px-6 py-6 text-center">
               <div className="flex justify-center">
-                <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '100%', maxWidth: '400px', height: 'auto', opacity: 1 }} />
+                <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '100%', maxWidth: '300px', height: 'auto', opacity: 1 }} />
               </div>
 
               <h2
+                className="font-bold"
                 style={{
                   fontFamily: 'Poppins',
-                  fontWeight: 500,
-                  fontSize: '28px',
+                  fontSize: '24px',
                   lineHeight: '120%',
                   letterSpacing: '0%',
                   textAlign: 'center'
@@ -470,7 +505,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                 className="mx-auto"
                 style={{
                   fontFamily: 'Poppins',
-                  fontWeight: 500,
+                  fontWeight: 600,
                   fontSize: '14px',
                   lineHeight: '140%',
                   letterSpacing: '0%',
@@ -488,10 +523,10 @@ const CommunityForm = ({ isOpen, onClose }) => {
         {/* Desktop Version */}
         <div className="hidden md:block">
           {step === 1 ? (
-            <div className="p-8 sm:p-12 md:p-16 text-center">
-              <div className="flex justify-center mb-24">
+            <div className="p-8 sm:p-12 md:p-16 text-center transform scale-90 origin-center">
+              <div className="flex justify-center mb-16">
                 <div className="flex items-center gap-3">
-                  <img src="/images/logo.png" alt="Herb Immortal" style={{ width: '91px', height: '84px', opacity: 1 }} />
+                  <img src="/images/logo.png" alt="Herb Immortal" style={{ width: '80px', height: '74px', opacity: 1 }} />
                   <div className="text-left">
                     <h1
                       className="font-bold"
@@ -501,7 +536,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
                         fontFamily: 'Poppins',
-                        fontSize: '40px',
+                        fontSize: '32px',
                         lineHeight: '100%'
                       }}
                     >
@@ -511,8 +546,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       className="text-gray-600"
                       style={{
                         fontFamily: 'Poppins',
-                        fontWeight: 400,
-                        fontSize: '11px',
+                        fontSize: '10px',
                         lineHeight: '100%',
                         letterSpacing: '0%'
                       }}
@@ -523,14 +557,12 @@ const CommunityForm = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-             
-
               <div className="mb-6 flex justify-center">
                 <div
                   className="loader-spin rounded-full"
                   style={{
-                    width: '96px',
-                    height: '96px',
+                    width: '80px',
+                    height: '80px',
                     background: 'conic-gradient(from 0deg at 50% 50%, #CBF696 0deg, #265C2D 360deg)',
                     opacity: 1,
                     position: 'relative'
@@ -539,10 +571,10 @@ const CommunityForm = ({ isOpen, onClose }) => {
                   <div
                     style={{
                       position: 'absolute',
-                      top: '15px',
-                      left: '15px',
-                      right: '15px',
-                      bottom: '15px',
+                      top: '12px',
+                      left: '12px',
+                      right: '12px',
+                      bottom: '12px',
                       background: 'white',
                       borderRadius: '50%'
                     }}
@@ -551,14 +583,14 @@ const CommunityForm = ({ isOpen, onClose }) => {
               </div>
 
               <div className="mb-6 flex justify-center">
-                <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '600px', height: 'auto', opacity: 1 }} />
+                <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '450px', height: 'auto', opacity: 1 }} />
               </div>
             </div>
           ) : step === 2 ? (
-            <div className="p-8 sm:p-12 md:p-16 relative flex flex-col items-center justify-center min-h-screen">
-              <div className="flex justify-center mb-8">
+            <div className="p-8 relative flex flex-col items-center justify-center min-h-screen">
+              <div className="flex justify-center mb-6">
                 <div className="flex items-center gap-3">
-                  <img src="/images/logo.png" alt="Herb Immortal" style={{ width: '91px', height: '84px', opacity: 1 }} />
+                  <img src="/images/logo.png" alt="Herb Immortal" style={{ width: '70px', height: '64px', opacity: 1 }} />
                   <div className="text-left">
                     <h1
                       className="font-bold"
@@ -568,7 +600,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
                         fontFamily: 'Poppins',
-                        fontSize: '40px',
+                        fontSize: '30px',
                         lineHeight: '100%'
                       }}
                     >
@@ -578,8 +610,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       className="text-gray-600"
                       style={{
                         fontFamily: 'Poppins',
-                        fontWeight: 400,
-                        fontSize: '11px',
+                        fontSize: '10px',
                         lineHeight: '100%',
                         letterSpacing: '0%'
                       }}
@@ -591,15 +622,15 @@ const CommunityForm = ({ isOpen, onClose }) => {
               </div>
 
               <div
-                className="relative z-10 bg-white"
+                className="relative z-10 bg-white transform scale-90 origin-top"
                 style={{
-                  borderRadius: '30px',
-                  width: '900px',
-                  padding: '2rem',
+                  borderRadius: '20px',
+                  width: '800px',
+                  padding: '1.5rem',
                 }}
               >
                 <div className="text-center mb-8">
-                 
+
                 </div>
 
                 <form onSubmit={handleSubmit} className="mx-auto">
@@ -609,11 +640,11 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       <input
                         type="text"
                         name="firstName"
-                        value={formData.firstName}
+                        value={formData.firstName || ''}
                         onChange={handleInputChange}
                         placeholder="First Name"
                         className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
                         required
                       />
                     </div>
@@ -623,11 +654,11 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       <input
                         type="text"
                         name="lastName"
-                        value={formData.lastName}
+                        value={formData.lastName || ''}
                         onChange={handleInputChange}
                         placeholder="Last Name"
                         className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
                         required
                       />
                     </div>
@@ -637,11 +668,11 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       <input
                         type="tel"
                         name="phoneNumber"
-                        value={formData.phoneNumber}
+                        value={formData.phoneNumber || ''}
                         onChange={handleInputChange}
                         placeholder="Number"
                         className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
                         required
                       />
                     </div>
@@ -651,11 +682,11 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       <input
                         type="email"
                         name="contactEmail"
-                        value={formData.contactEmail}
+                        value={formData.contactEmail || ''}
                         onChange={handleInputChange}
                         placeholder="Email"
                         className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
                         required
                       />
                     </div>
@@ -665,60 +696,55 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       <input
                         type="date"
                         name="birthday"
-                        value={formData.birthday}
+                        value={formData.birthday || ''}
                         onChange={handleInputChange}
                         className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
                         required
                       />
                     </div>
 
                     <div>
-                      <label className="form-label block mb-2">Business Structure *</label>
+                      <label className="form-label block mb-2">Gender *</label>
                       <select
-                        name="businessStructure"
-                        value={formData.businessStructure}
+                        name="gender"
+                        value={formData.gender || ''}
                         onChange={handleInputChange}
                         className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
                         required
                       >
-                        <option value="">Business Structure</option>
-                        <option value="sole-proprietorship">Sole Proprietorship</option>
-                        <option value="partnership">Partnership</option>
-                        <option value="llc">LLC</option>
-                        <option value="corporation">Corporation</option>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
                       </select>
                     </div>
 
                     <div>
-                      <label className="form-label block mb-2">Product Categories *</label>
-                      <select
-                        name="productCategories"
-                        value={formData.productCategories}
-                        onChange={handleInputChange}
-                        className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
-                        required
-                      >
-                        <option value="">Product Categories</option>
-                        <option value="herbs">Herbs</option>
-                        <option value="supplements">Supplements</option>
-                        <option value="teas">Teas</option>
-                        <option value="essential-oils">Essential Oils</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="form-label block mb-2">Product Types *</label>
+                      <label className="form-label block mb-2">Your Location *</label>
                       <input
                         type="text"
-                        name="productTypes"
-                        value={formData.productTypes}
+                        name="location"
+                        value={formData.location || ''}
                         onChange={handleInputChange}
-                        placeholder="Product Types"
+                        placeholder="Location"
                         className="form-field px-4 py-3 w-full"
-                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '56px', borderRadius: '10px', opacity: 1 }}
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="form-label block mb-2">Role / Designation *</label>
+                      <input
+                        type="text"
+                        name="role"
+                        value={formData.role || ''}
+                        onChange={handleInputChange}
+                        placeholder="Role/Designation"
+                        className="form-field px-4 py-3 w-full"
+                        style={{ background: '#FFFFFF', border: '1px solid #3A5B22', height: '48px', borderRadius: '10px', opacity: 1 }}
                         required
                       />
                     </div>
@@ -726,7 +752,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                 </form>
               </div>
 
-              <div className="mt-8 flex justify-center items-center">
+              <div className="mt-8 flex justify-center items-center transform scale-90">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -735,13 +761,13 @@ const CommunityForm = ({ isOpen, onClose }) => {
                     className="w-5 h-5 rounded border-2 border-green-700 cursor-pointer accent-green-700"
                     required
                   />
-                  <span className="text-sm" style={{ fontFamily: 'DM Sans', fontWeight: 500, color: '#170F49' }}>
+                  <span className="text-sm" style={{ fontFamily: 'DM Sans', color: '#170F49' }}>
                     I agree to data processing under PIPEDA for verification.
                   </span>
                 </label>
               </div>
 
-              <div className="mt-6 flex justify-center">
+              <div className="mt-6 flex justify-center transform scale-90">
                 <button
                   onClick={handleSubmit}
                   className="text-white hover:opacity-90 transition-all duration-200"
@@ -752,7 +778,6 @@ const CommunityForm = ({ isOpen, onClose }) => {
                     borderRadius: '10px',
                     opacity: 1,
                     fontFamily: 'Poppins',
-                    fontWeight: 700,
                     fontSize: '18px',
                     lineHeight: '100%',
                     letterSpacing: '0%'
@@ -763,10 +788,10 @@ const CommunityForm = ({ isOpen, onClose }) => {
               </div>
             </div>
           ) : (
-            <div className="p-8 sm:p-12 md:p-16 text-center">
+            <div className="p-8 sm:p-12 md:p-16 text-center transform scale-90 origin-center">
               <div className="flex justify-center mb-24">
                 <div className="flex items-center gap-3">
-                  <img src="/images/logo.png" alt="Herb Immortal" style={{ width: '91px', height: '84px', opacity: 1 }} />
+                  <img src="/images/logo.png" alt="Herb Immortal" style={{ width: '80px', height: '74px', opacity: 1 }} />
                   <div className="text-left">
                     <h1
                       className="font-bold"
@@ -776,7 +801,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
                         fontFamily: 'Poppins',
-                        fontSize: '40px',
+                        fontSize: '32px',
                         lineHeight: '100%'
                       }}
                     >
@@ -786,8 +811,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                       className="text-gray-600"
                       style={{
                         fontFamily: 'Poppins',
-                        fontWeight: 400,
-                        fontSize: '11px',
+                        fontSize: '10px',
                         lineHeight: '100%',
                         letterSpacing: '0%'
                       }}
@@ -799,11 +823,10 @@ const CommunityForm = ({ isOpen, onClose }) => {
               </div>
 
               <h2
-                className="mb-4"
+                className="mb-4 font-bold"
                 style={{
                   fontFamily: 'Poppins',
-                  fontWeight: 500,
-                  fontSize: '33px',
+                  fontSize: '30px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   verticalAlign: 'middle'
@@ -815,13 +838,13 @@ const CommunityForm = ({ isOpen, onClose }) => {
                 className="mb-6 mx-auto"
                 style={{
                   fontFamily: 'Poppins',
-                  fontWeight: 500,
-                  fontSize: '17px',
+                  fontWeight: 600,
+                  fontSize: '16px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   textAlign: 'center',
                   verticalAlign: 'middle',
-                  width: '640px',
+                  width: '600px',
                   height: '52px',
                   opacity: 1,
                   color: '#3A5B22'
@@ -831,7 +854,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
               </p>
 
               <div className="mb-6 flex justify-center">
-                <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '600px', height: 'auto', opacity: 1 }} />
+                <img src="/images/FormImg.jpg" alt="Community Illustration" style={{ width: '450px', height: 'auto', opacity: 1 }} />
               </div>
             </div>
           )}
