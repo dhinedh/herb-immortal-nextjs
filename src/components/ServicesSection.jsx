@@ -124,6 +124,16 @@ const ServicesSection = () => {
             <ServiceCard key={service.id} {...service} />
           ))}
         </div>
+
+        <div className="flex justify-center mt-8 sm:mt-12">
+          <a
+            href="#"
+            className="font-bold text-lg sm:text-2xl border-b-[3px] border-black pb-1 leading-none"
+            style={{ fontFamily: 'DM Sans' }}
+          >
+            More Services
+          </a>
+        </div>
       </div>
     </section>
   );

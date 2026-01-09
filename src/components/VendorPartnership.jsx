@@ -147,68 +147,7 @@ const VendorPartnership = () => {
                     </Link>
                 </div>
 
-                {/* 4. Partners in a Row */}
-                <div className="text-center">
-                    <p
-                        className="mb-0"
-                        style={{
-                            fontFamily: 'DM Sans, sans-serif',
-                            fontWeight: 400,
-                            fontStyle: 'normal',
-                            fontSize: '15px',
-                            lineHeight: '45px',
-                            letterSpacing: '0%',
-                            textAlign: 'center',
-                            textTransform: 'capitalize',
-                        }}
-                    >
-                        Trusted By Our Customers & Partners
-                    </p>
-                    <div className="flex flex-row justify-center gap-4">
-                        <div className="bg-white flex items-center justify-center overflow-hidden"
-                            style={{
-                                width: '111.83px',
-                                height: '52.74px',
-                                borderRadius: '12px',
-                                opacity: 1,
-                                boxShadow: '0px 4px 4px 0px #00000040'
-                            }}>
-                            <img
-                                src="/images/Partner1.png"
-                                alt="Canada Post"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                        <div className="bg-white flex items-center justify-center p-2"
-                            style={{
-                                width: '111.83px',
-                                height: '52.74px',
-                                borderRadius: '12px',
-                                opacity: 1,
-                                boxShadow: '0px 4px 4px 0px #00000040'
-                            }}>
-                            <img
-                                src="/images/Partner2.png"
-                                alt="Walmart"
-                                className="object-contain max-h-full"
-                            />
-                        </div>
-                        <div className="bg-white flex items-center justify-center p-2"
-                            style={{
-                                width: '111.83px',
-                                height: '52.74px',
-                                borderRadius: '12px',
-                                opacity: 1,
-                                boxShadow: '0px 4px 4px 0px #00000040'
-                            }}>
-                            <img
-                                src="/images/Partner3.png"
-                                alt="CHFA"
-                                className="object-contain max-h-full"
-                            />
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             {/* LG Layout - Decreased Width */}
@@ -232,25 +171,18 @@ const VendorPartnership = () => {
                                 <img
                                     src="/images/PartnerPhone1.png"
                                     alt="Vendor Onboarding Screen"
-                                    className="w-[160px] sm:w-[220px] md:w-[280px] lg:w-[360px] h-auto object-cover"
+                                    className="w-[140px] sm:w-[200px] md:w-[260px] lg:w-[320px] h-auto object-cover"
                                     style={{ borderRadius: '38px' }}
                                 />
                             </div>
 
                             {/* Phone 2 - Center */}
-                            <div className="relative z-10 bottom-[-80px] sm:bottom-[-100px] md:bottom-[-120px] lg:bottom-[-140px]">
-                                <img
-                                    src="/images/PartnerPhone2.png"
-                                    alt="Vendor Form Screen"
-                                    className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] h-auto object-cover translate-x-[10px] sm:translate-x-[15px] md:translate-x-[20px]"
-                                    style={{ borderRadius: '38px' }}
-                                />
-                            </div>
+
 
                             {/* Phone 3 - Back Right - Moved a little more right */}
-                            <div className="absolute right-[-100px] sm:right-[-110px] md:right-[-120px] lg:right-[-50px] top-[-80px] sm:top-[-110px] md:top-[-150px]">
+                            <div className="absolute right-[-50px] sm:right-[-60px] md:right-[-70px] lg:right-[50px] top-[-80px] sm:top-[-110px] md:top-[-150px]">
                                 <img
-                                    src="/images/PartnerPhone3.png"
+                                    src="/images/PartnerPhone2.png"
                                     alt="Contact Form Screen"
                                     className="w-[160px] sm:w-[220px] md:w-[240px] lg:w-[280px] h-auto object-cover"
                                     style={{ borderRadius: '38px' }}
@@ -285,7 +217,7 @@ const VendorPartnership = () => {
                             {/* Phone 4 - Customer Order */}
                             <div className="mt-6 sm:mt-8 lg:ml-8">
                                 <img
-                                    src="/images/PartnerPhone4.png"
+                                    src="/images/PartnerPhone3.png"
                                     alt="Customer Order Screen"
                                     className="w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] h-auto object-cover"
                                     style={{ borderRadius: '38px' }}
@@ -303,43 +235,7 @@ const VendorPartnership = () => {
                         </Link>
                     </div>
 
-                    {/* Partners Section - Reduced height, increased width */}
-                    <div className="text-center flex gap-3 sm:gap-4 md:gap-5 flex-col items-center pt-2 sm:pt-3 md:pt-4">
 
-                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-[42px] text-gray-800 font-normal mb-4 sm:mb-5 md:mb-6 pt-2 sm:pt-3 md:pt-4 px-4">
-                            Trusted By Our Customers & Partners
-                        </p>
-
-
-                        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-12 md:gap-16 lg:gap-20 w-full px-4">
-                            <div className="bg-white w-full sm:w-[300px] md:w-[360px] lg:w-[420px] h-[100px] sm:h-[115px] md:h-[125px] lg:h-[135px] p-4 sm:p-5 md:p-6 lg:p-7 rounded-[24px] sm:rounded-[30px] md:rounded-[32px] flex items-center justify-center" style={{ boxShadow: '0px 4px 4px 0px #00000040' }}>
-                                <img
-                                    src="/images/Partner1.png"
-                                    alt="Canada Post"
-                                    className="w-[420px] h-full object-cover rounded-[24px] sm:rounded-[30px] md:rounded-[32px]"
-                                    style={{ clipPath: 'inset(0px 5px 0px 5px)' }}
-                                />
-                            </div>
-
-
-                            <div className="bg-white w-full sm:w-[300px] md:w-[360px] lg:w-[420px] h-[100px] sm:h-[115px] md:h-[125px] lg:h-[135px] p-4 sm:p-5 md:p-6 lg:p-7 rounded-[24px] sm:rounded-[30px] md:rounded-[32px] flex items-center justify-center" style={{ boxShadow: '0px 4px 4px 0px #00000040' }}>
-                                <img
-                                    src="/images/Partner2.png"
-                                    alt="Walmart"
-                                    className="object-contain max-h-full"
-                                    style={{ filter: 'drop-shadow(0px 0px 0px transparent)' }}
-                                />
-                            </div>
-                            <div className="bg-white w-full sm:w-[300px] md:w-[360px] lg:w-[420px] h-[100px] sm:h-[115px] md:h-[125px] lg:h-[135px] p-4 sm:p-5 md:p-6 lg:p-7 rounded-[24px] sm:rounded-[30px] md:rounded-[32px] flex items-center justify-center" style={{ boxShadow: '0px 4px 4px 0px #00000040' }}>
-                                <img
-                                    src="/images/Partner3.png"
-                                    alt="CHFA"
-                                    className="object-contain max-h-full"
-                                    style={{ filter: 'drop-shadow(0px 0px 0px transparent)' }}
-                                />
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

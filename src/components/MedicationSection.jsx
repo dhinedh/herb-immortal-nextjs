@@ -198,7 +198,7 @@ const MedicationSection = () => {
           </div>
 
           {/* Image Section - Right on sm/md, Left on lg */}
-          <div className="image-wrapper-medication w-1/2 md:w-1/2 lg:w-1/2 flex justify-end lg:justify-center order-2 lg:order-1" style={{paddingRight: 0, marginRight: 0}}>
+          <div className="image-wrapper-medication w-1/2 md:w-1/2 lg:w-1/2 flex justify-end lg:justify-center order-2 lg:order-1" style={{ paddingRight: 0, marginRight: 0 }}>
             <style>{`
               @media (max-width: 1023px) {
                 .image-wrapper-medication {
@@ -229,7 +229,7 @@ const MedicationSection = () => {
               className="image-container-medication flex items-center justify-center w-full max-w-[360px] lg:max-w-[730px] lg:items-end"
               style={{
                 height: 'clamp(360px, 45vw, 670px)',
-                borderRadius: 'clamp(36px, 9vw, 98px)',
+                borderRadius: 'clamp(18px, 4.5vw, 49px)',
                 position: 'relative',
                 overflow: 'hidden',
                 marginRight: 0,
@@ -254,8 +254,8 @@ const MedicationSection = () => {
                   bottom: '0',
                   maxWidth: '620px',
                   maxHeight: '1300px',
-                  borderTopLeftRadius: 'clamp(36px, 9vw, 98px)',
-                  borderTopRightRadius: 'clamp(36px, 9vw, 98px)',
+                  borderTopLeftRadius: 'clamp(18px, 4.5vw, 49px)',
+                  borderTopRightRadius: 'clamp(18px, 4.5vw, 49px)',
                 }}
               />
             </div>
