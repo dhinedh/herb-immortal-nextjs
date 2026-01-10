@@ -540,7 +540,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                         lineHeight: '100%'
                       }}
                     >
-                      Herb Immortal
+                      MYHERBALSHOP
                     </h1>
                     <p
                       className="text-gray-600"
@@ -604,7 +604,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                         lineHeight: '100%'
                       }}
                     >
-                      Herb Immortal
+                      MYHERBALSHOP
                     </h1>
                     <p
                       className="text-gray-600"
@@ -805,7 +805,7 @@ const CommunityForm = ({ isOpen, onClose }) => {
                         lineHeight: '100%'
                       }}
                     >
-                      Herb Immortal
+                      MYHERBALSHOP
                     </h1>
                     <p
                       className="text-gray-600"

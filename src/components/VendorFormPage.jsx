@@ -75,7 +75,7 @@ const VendorFormPage = () => {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
               }}>
-                Herb Immortal
+                MYHERBALSHOP
               </h1>
               <p className="text-gray-600" style={{
                 fontFamily: 'DM Sans, sans-serif',
